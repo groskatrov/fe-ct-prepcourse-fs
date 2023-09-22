@@ -7,6 +7,16 @@ function crearGato(nombre, edad) {
    // La propiedad "meow" será una función que retorne el string: "Meow!".
    // Retornar el objeto.
    // Tu código:
+ 
+const Gato = {
+   nombre: nombre,
+   edad: edad,
+   meow: function()
+   { return "Meow!" }
+};
+
+return Gato;
+
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -14,6 +24,13 @@ function nuevoUsuario(nombre, email, password) {
    // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
    // Retornar el objeto.
    // Tu código:
+
+   const User = {
+      nombre: nombre,
+      email: email,
+      password: password,
+   }
+   return User;
 }
 
 function agregarPropiedad(objeto, propiedad) {
@@ -22,6 +39,10 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
+objeto[propiedad] = null;
+
+return objeto;
+
 }
 
 function invocarMetodo(objeto, metodo) {
@@ -29,6 +50,11 @@ function invocarMetodo(objeto, metodo) {
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
    // [NOTA]: no necesitar retornar nada.
    // Tu código:
+if(objeto.hasOwnProperty(metodo) && typeof (objeto.metodo) === "function")
+{
+   objeto.metodo;
+}
+
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
